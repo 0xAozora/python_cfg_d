@@ -1,6 +1,6 @@
 import json, os, sys
 
-def ini():
+def readconfig():
 
     #Load Config
     os.system("cls" if os.name == "nt" else "clear")
@@ -15,8 +15,8 @@ def ini():
         print("Created default config.json. Configure and then run again.")
         sys.exit()
 
+    return cfg
     #Config Variables
-    global debug; debug = True
-    global name; name = cfg['username']
-    global userid; userid = cfg['userid']
+    # global name; name = cfg['username']
+    # global userid; userid = cfg['userid']
     #etc...
