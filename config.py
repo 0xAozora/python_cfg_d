@@ -8,7 +8,7 @@ def read():
     else:
         from default_config import cfg_d
         _config = open("config.json", "w")
-        json.dump(cfg_d, _config) 
+        _config.write(cfg_d) 
         _config.close()
         print("Created default config.json. Configure and then run again.")
         sys.exit()
@@ -22,3 +22,6 @@ def update(keys, values):
     _config = open("config.json", "w")
     json.dump(cfg, _config) 
     _config.close()
+
+if __name__ == "__main__":
+    print(read())
