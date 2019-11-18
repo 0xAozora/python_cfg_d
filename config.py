@@ -15,10 +15,10 @@ def read():
         
     return cfg
 
-def update(keys, values):
+def update(d):
     cfg = read()
-    for i in range(keys.lenght):
-        cfg[keys[i]] = values[i]
+    for key in d:
+        cfg[key] = d[key]
     _config = open("config.json", "w")
     json.dump(cfg, _config) 
     _config.close()
